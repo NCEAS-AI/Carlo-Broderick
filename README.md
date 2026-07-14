@@ -54,13 +54,13 @@ Prefer to do it by hand? `agent-setup/SETUP.md` is readable on its own — the p
 Released under [CC0 1.0 Universal](LICENSE) — public domain. Copy, modify, and use
 it for any purpose, no attribution required.
 
-## How to cite
+## Cite us!
 
-Attribution isn't required, but citation metadata is in
-[`CITATION.cff`](CITATION.cff) (GitHub renders a "Cite this repository" button from
-it, and a Zenodo DOI will appear at the top of this README once archived).
+Citation isn't required, but if you're a true homie you will!
 
-If you're a true homie, you can cite us at:
+Citation metadata is in [`CITATION.cff`](CITATION.cff) — GitHub renders a "Cite this
+repository" button from it, and a Zenodo DOI will appear at the top of this README once
+archived.
 
 > Broderick, C. (2026). *Coding-Agent Rules for Data Science* (Version v1.0.0)
 > [Software]. https://github.com/NCEAS-AI/Coding-Agent-Rules-for-Data-Science
