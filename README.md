@@ -1,46 +1,64 @@
-<!-- DOI-BADGE-PLACEHOLDER: replace after first Zenodo release with the badge markdown Zenodo provides -->
+<!-- DOI-BADGE-PLACEHOLDER: after your first Zenodo release, replace this line with the badge markdown Zenodo provides. -->
 
-# Reproducible R and Python data-science conventions for agentic coding
+# Coding-Agent Rules for Data Science
 
-A reproducible R/Python data-science conventions ruleset for agentic coding in environmental, ecological, and geospatial work, written to be dropped into a Cursor project as an always-on rules file that steers agentic tools toward code that reads top-to-bottom and reruns cleanly.
+A reusable, IDE-agnostic ruleset that steers AI coding agents toward
+**reproducible, analysis-first** data-science work in R and Python — with an
+environmental, ecological, and geospatial slant. Instead of copying a one-size
+config, you point your agent at this repo and it **installs a personalized copy**
+tuned to your tools, your machine, and your preferences.
 
-## Repository contents
+## Quick start
 
-- `.cursor/rules/data-science-rules.mdc` — the conventions themselves: a Cursor rules file (Markdown body with YAML front matter, including `alwaysApply: true`).
-- `LICENSE` — the full CC0 1.0 Universal public domain dedication.
-- `CITATION.cff` — Citation File Format metadata that powers GitHub's "Cite this repository" button.
-- `README.md` — this file.
+Paste this repository's URL into your coding agent (Cursor, Claude Code,
+Windsurf, Copilot, Cline, Codex/AGENTS.md, and others) and tell it:
 
-## How to use
+> **"Read `agent-setup/SETUP.md` in this repo and follow it to set these rules up for me."**
 
-The conventions live in a single Cursor rules file, `.cursor/rules/data-science-rules.mdc`. To use them in your own project, copy that file into your project's `.cursor/rules/` directory, keeping the `.mdc` extension:
+The agent will:
 
-```bash
-mkdir -p .cursor/rules
-cp data-science-rules.mdc <your-project>/.cursor/rules/
-```
+1. Ask how you want to run setup — let it probe your machine and auto-answer what it can, or answer everything yourself; fast path or full interview.
+2. Figure out which tool you're using and where that tool expects rules files.
+3. Inspect (or ask about) *your* system — cores, RAM, GPU, OS, installed languages — never assume anyone else's.
+4. Ask the parts that are genuinely your call (languages, geospatial/parallel/GPU work, server vs. laptop, emoji comments, strictness, layout, and more).
+5. Assemble a personalized ruleset from `agent-setup/rules-template.md`, write it into the correct location and format for your tool, and print the whole thing back for you to review.
 
-The `alwaysApply: true` front matter loads the rules on every request, so agentic tools follow them automatically. The file's body is plain Markdown, so you can also read it directly here on GitHub or in any editor.
+Prefer to do it by hand? `agent-setup/SETUP.md` is readable on its own — the phases and the full questionnaire are right there.
 
-The conventions cover:
+## What's in here
 
-- Script structure
-- File discipline
-- Project layout
-- Reproducibility and data integrity
-- Geospatial/CRS handling
-- Shared-server parallel/multiprocessing discipline
-- Checkpointing
-- Agent guardrails
+| Path | What it is |
+|---|---|
+| `agent-setup/SETUP.md` | The interactive installer protocol the agent follows. Start here. |
+| `agent-setup/rules-template.md` | The build source — the full ruleset, annotated with markers the installer uses to include/exclude/fill sections. |
+| `personal-rules/data-science-rules.mdc` | The author's own ruleset, kept current over time. A concrete example of what a filled-in result looks like, and usable as-is. |
+| `LICENSE` | CC0 1.0 — public domain. |
+| `CITATION.cff` | Citation metadata. |
+
+## Design notes
+
+- **IDE-agnostic by construction.** The installer detects the target tool and
+  writes natively for it, falling back to the cross-tool `AGENTS.md` standard when
+  you use several tools or aren't sure.
+- **Universal floor vs. your call.** Safety and reproducibility items (real-data
+  integrity, rebuildable environments, worker cleanup, CRS verification, guardrails)
+  are included for everyone. Cosmetic and workflow choices (emojis, layout, README
+  discipline, strictness) are asked, not assumed.
+- **Your machine, not mine.** The system section is rewritten from a live inspection
+  of your hardware, so utilization caps and worker sizing fit what you're actually on.
+- **Static once installed.** The generated ruleset is a snapshot. It does not phone
+  home or auto-update from this repo — re-run the setup yourself if you want a refresh.
 
 ## License
 
-Released under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) (public domain). Use it for any purpose, no attribution required. See the [LICENSE](LICENSE) file for the full text.
+Released under [CC0 1.0 Universal](LICENSE) — public domain. Copy, modify, and use
+it for any purpose, no attribution required.
 
 ## How to cite
 
-Attribution isn't required, but citation metadata is provided in [CITATION.cff](CITATION.cff). GitHub renders a "Cite this repository" button from it, and a Zenodo DOI will appear at the top of this README once the repository is archived.
+Attribution isn't required, but if you'd like to cite it, metadata is in
+[`CITATION.cff`](CITATION.cff) (GitHub renders a "Cite this repository" button from
+it, and a Zenodo DOI will appear at the top of this README once archived).
 
-Text citation:
-
-> Broderick, C. (2026). Reproducible R and Python data-science conventions for agentic coding (Version v1.0.0) [Software]. https://github.com/NCEAS-AI/Coding-Agent-Rules-for-Data-Science
+> Broderick, C. (2026). *Coding-Agent Rules for Data Science* (Version v1.0.0)
+> [Software]. https://github.com/NCEAS-AI/Coding-Agent-Rules-for-Data-Science

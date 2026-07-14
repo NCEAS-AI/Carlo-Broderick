@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use these conventions, please cite them as below."
-title: "Reproducible R and Python data-science conventions for agentic coding"
+title: "Coding-Agent Rules for Data Science"
 type: software
 authors:
   - family-names: Broderick
