@@ -1,79 +1,32 @@
-# Data-Science Agent Rules & Conventions
+<!-- DOI-BADGE-PLACEHOLDER: replace after first Zenodo release with the badge markdown Zenodo provides -->
 
-[![License: CC0 1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+# Reproducible R and Python data-science conventions for agentic coding
 
-A portable set of **reproducible R and Python data-science conventions** for
-environmental, ecological, and geospatial work. These rules guide an AI coding
-assistant (or a human) toward analysis code that reads top-to-bottom, reruns
-cleanly, and treats data with integrity — optimized for reproducible analysis
-rather than "production" software polish.
+A reproducible R/Python data-science conventions ruleset for agentic coding in environmental, ecological, and geospatial work, written to be dropped into a Cursor project as an always-on rules file that steers agentic tools toward code that reads top-to-bottom and reruns cleanly.
 
-They are tool-agnostic: the same rules can drive any AI/IDE coding agent, or
-simply serve as a written style guide for the team.
+## How to use
 
-## What's inside
+It's a Cursor rules file — place it under `.cursor/rules/` with the `.mdc` extension (e.g. `.cursor/rules/data-science-rules.mdc`). The `alwaysApply: true` front matter loads it on every request. The `.md` copy is for easy reading; rename it to `.mdc` when installing.
 
-- `.cursor/rules/data-science-rules.mdc` — the full ruleset, covering:
-  - **Real data only** — never fabricate, mock, or insert demo/placeholder data.
-  - Script structure (literate, linear, self-contained, top-to-bottom).
-  - Settings- and file-path-first layout, numbered multi-file pipelines.
-  - Project layout, housekeeping, archiving, and change records.
-  - README maintenance (project README + data README).
-  - Reproducibility & data integrity (pinned deps, seeds, read-only raw data).
-  - Geospatial & CRS handling.
-  - Parallel/multiprocessing discipline on shared servers.
-  - Logging in Pacific Time, comments that explain the *why*.
-  - Agent guardrails for destructive or consequential actions.
+The conventions cover:
 
-> The file uses an `.mdc` extension with a small YAML front-matter header, but the
-> body is plain Markdown and readable as-is in any editor or on GitHub.
-
-## Point your AI agent straight at this repo (easiest)
-
-Because this repository is **public**, you don't have to download anything by
-hand. Just point your IDE agent or AI coding assistant at the repo URL and ask it
-to read the rules and install them in the right place for your setup — that
-usually works:
-
-```
-https://github.com/NCEAS-AI/Carlo-Broderick
-```
-
-Example ask:
-
-> "Read the data-science rules from
-> https://github.com/NCEAS-AI/Carlo-Broderick and add them to my project's
-> agent-rules location."
-
-The agent can fetch `.cursor/rules/data-science-rules.mdc` directly from the repo
-and insert its contents into the appropriate location itself.
-
-## Manual install (generic)
-
-Most AI/IDE coding agents load "rules" or "conventions" from a known location.
-Copy the ruleset into whichever your tool uses. A few common examples:
-
-```bash
-# Cursor (project- or user-level rules)
-mkdir -p .cursor/rules
-cp .cursor/rules/data-science-rules.mdc <your-project>/.cursor/rules/
-
-# Generic "agent instructions" convention
-cp .cursor/rules/data-science-rules.mdc <your-project>/AGENTS.md
-
-# Or keep it as a plain style guide anywhere in your repo/docs
-cp .cursor/rules/data-science-rules.mdc <your-project>/docs/data-science-conventions.md
-```
-
-Adjust the destination to match your assistant's expected rules path. The content
-is the same regardless of where it lives.
+- Script structure
+- File discipline
+- Project layout
+- Reproducibility and data integrity
+- Geospatial/CRS handling
+- Shared-server parallel/multiprocessing discipline
+- Checkpointing
+- Agent guardrails
 
 ## License
 
-This project is released under the
-[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) public
-domain dedication. To the extent possible under law, all rights are waived — you
-may copy, modify, and use these rules for any purpose without asking permission
-or providing attribution.
+Released under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) (public domain). Use it for any purpose, no attribution required. See the [LICENSE](LICENSE) file for the full text.
 
-See the [`LICENSE`](LICENSE) file for the full, verbatim CC0 1.0 legal text.
+## How to cite
+
+Attribution isn't required, but citation metadata is provided in [CITATION.cff](CITATION.cff). GitHub renders a "Cite this repository" button from it, and a Zenodo DOI will appear at the top of this README once the repository is archived.
+
+Text citation:
+
+> Broderick, C. (2026). Reproducible R and Python data-science conventions for agentic coding (Version v1.0.0) [Software]. https://github.com/NCEAS-AI/Carlo-Broderick
