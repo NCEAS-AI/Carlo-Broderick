@@ -64,6 +64,10 @@ it for any purpose, no attribution required.
 
 ✨🎉🫶 &nbsp; **Citation isn't required, but if you're a true homie you will!** &nbsp; 🫶🎉✨
 
+[![cite us — be a homie](https://img.shields.io/badge/cite%20us-be%20a%20homie-ff69b4?style=for-the-badge&logo=github)](CITATION.cff)
+&nbsp;
+[![public domain — CC0 1.0](https://img.shields.io/badge/license-CC0%201.0-gold?style=for-the-badge)](LICENSE)
+
 </div>
 
 Citation metadata lives in [`CITATION.cff`](CITATION.cff) — GitHub renders a **"Cite this
