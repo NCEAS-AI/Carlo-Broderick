@@ -43,4 +43,4 @@ Attribution isn't required, but citation metadata is provided in [CITATION.cff](
 
 Text citation:
 
-> Broderick, C. (2026). Reproducible R and Python data-science conventions for agentic coding (Version v1.0.0) [Software]. https://github.com/NCEAS-AI/Carlo-Broderick
+> Broderick, C. (2026). Reproducible R and Python data-science conventions for agentic coding (Version v1.0.0) [Software]. https://github.com/NCEAS-AI/Coding-Agent-Rules-for-Data-Science
