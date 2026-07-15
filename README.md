@@ -27,11 +27,6 @@ inspect (or ask about) my system, ask me the preference questions, then build th
 ruleset from agent-setup/rules-template.md and show me the whole thing before you
 write any file.
 ```
-
-> **Note:** GitHub can't put a real clipboard button in README text (it strips
-> JavaScript for security), but every code block like the one above gets a
-> built-in copy icon on hover — that's the 📋 to click.
-
 The agent will:
 
 1. Ask how you want to run setup — let it probe your machine and auto-answer what it can, or answer everything yourself; fast path or full interview.
