@@ -18,7 +18,7 @@ whenever you want to pull the latest.
 
 ###  Copy-paste prompt to get started
 
-Paste the prompt below into your coding agent:
+<b>Paste the prompt below into your coding agent:</b>
 <br>(Cursor, Claude Code, Windsurf, Copilot, Cline, Codex/AGENTS.md, and others)</br>
 
 ```text
